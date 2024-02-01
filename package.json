@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "run-p -l type-check:watch start:dev",
-    "start:dev": "nodemon --transpileOnly --esm src/index.ts",
+    "start:dev": "nodemon -r dotenv/config --transpileOnly --esm src/index.ts",
     "type-check": "tsc --noEmit --preserveWatchOutput",
     "type-check:watch": "npm run type-check -- --watch"
   },
@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
     "express": "^4.18.2"
   },
   "devDependencies": {
