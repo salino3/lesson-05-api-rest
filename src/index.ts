@@ -1,11 +1,11 @@
 import express from 'express';
 import path from "path";
 import url from "url";
-// import dotenv from "dotenv";
 import {createRestApiServer} from './core/servers/index.js';
 import { envConstants } from "./core/constants/env.constants.js";
 
 import { booksApi } from "./books.api.js";
+
 
 const restApiServer = createRestApiServer();
 
